@@ -1,0 +1,10 @@
+configuration_saved#:#Configurazione salvata
+settings#:#Impostazioni di MinDef xApi
+plugin_enabled#:#Attivo
+compatible_version#:#La versione attuale di ILIAS è compatibile con questo plugin.
+incompatible_version#:#La versione attuale di ILIAS non è compatibile con questo plugin.
+not_writable#:#Non hai i permessi di scrittura sui file ILIAS
+enable#:#Attivare il supporto xApi
+disable#:#Disattivare il supporto xApi
+status_active#:#xApi è attivo
+status_supported#:#La tua versione di ILIAS è supportata
