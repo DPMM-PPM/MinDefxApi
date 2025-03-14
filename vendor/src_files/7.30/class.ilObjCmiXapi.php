@@ -1862,7 +1862,7 @@ class ilObjCmiXapi extends ilObject2
                 'objectType' => 'Agent',
                 'account' => [
                     'homePage' => $homePage,
-                    'name' => $cmixUser->getUsrIdent()
+                    'name' => $name
                 ]
             ];
             if ($name !== '') {
