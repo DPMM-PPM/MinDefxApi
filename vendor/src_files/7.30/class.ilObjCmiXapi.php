@@ -144,6 +144,7 @@ class ilObjCmiXapi extends ilObject2
     const PRIVACY_IDENT_IL_UUID_RANDOM = 4;
     const PRIVACY_IDENT_IL_UUID_SHA256 = 5;
     const PRIVACY_IDENT_IL_UUID_SHA256URL = 6;
+    const PRIVACY_IDENT_IL_LOGIN = 7;
 
     /**
      * @var string
@@ -1862,7 +1863,7 @@ class ilObjCmiXapi extends ilObject2
                 'objectType' => 'Agent',
                 'account' => [
                     'homePage' => $homePage,
-                    'name' => $name
+                    'name' => $cmixUser->getUsrIdent()
                 ]
             ];
             if ($name !== '') {
