@@ -894,6 +894,8 @@ class ilObjCmiXapiGUI extends ilObject2GUI
                 return "il_uuid_sha256";
             case 6:
                 return "il_uuid_sha256url";
+            case 7:
+                return "il_uuid_login";
         }
         return '';
     }
