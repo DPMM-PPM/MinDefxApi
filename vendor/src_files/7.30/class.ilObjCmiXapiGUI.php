@@ -671,10 +671,15 @@ class ilObjCmiXapiGUI extends ilObject2GUI
                 $DIC->language()->txt("conf_privacy_name"),
                 $DIC->language()->txt('conf_privacy_name_' . self::getPrivacyNameString($this->object->getPrivacyName()))
             );
-            
+            if ($this->object->getPrivacyIdent()==7){
+            	$texte= 'ui_uihk_xmindefxapi_conf_privacy_ident_il_login';
+            	}
+            else{
+            	$texte='conf_privacy_ident_' . self::getPrivacyIdentString($this->object->getPrivacyIdent());
+            	}
             $info->addProperty(
                 $DIC->language()->txt("conf_privacy_ident"),
-                $DIC->language()->txt('conf_privacy_ident_' . self::getPrivacyIdentString($this->object->getPrivacyIdent()))
+                $DIC->language()->txt($texte)
             );
         }
 
