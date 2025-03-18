@@ -11,3 +11,5 @@ status_supported#:#Votre version ILIAS est supportée
 status_inactive_info#:#L'appui sur le bouton va lancer les actions suivantes :<ul><li> Renommage des fichiers d'origine du module CmiXapi avec l'extension .bkup</li><li> Remplacement des fichiers d'origine par les fichiers du Plugin</li></ul><br/><strong>Pour assurer une remise à l'état d'origine en cas de désactivation du support xApi, ces fichiers de sauvegarde ne doivent pas être supprimés du serveur.</strong>
 status_active_info#:#L'appui sur le bouton va lancer les actions suivantes :<ul><li> Suppression des fichier modifiés par le plugin dans le module CmiXapi</li><li> Rétablissement des fichiers d'origine (suppression de l'extension .bkup)</li></ul>
 uninstall_not_possible#:#Désactiver le support xApi dans l'onglet configuration avant désinstallation
+conf_privacy_ident_il_login#:#Identification par le login ILIAS
+conf_privacy_ident_il_login_info#:#L'identifiant est le login de connexion sur ILIAS en clair. Ce mode d'utilisation est identique pour chaque appel, mais peut permettre une conclusion directe sur l'utilisateur d'ILIAS.
