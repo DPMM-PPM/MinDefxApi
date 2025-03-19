@@ -136,11 +136,19 @@
     foreach ($this->replace_list as $file_path) {
       if ($this->compatible_version) {
         $file_name = $this->get_local_path($file_path);
-        $content = file_get_contents($file_path);
-        
-        /* Suppression du fichier modifié par le plugin et rename du fichier de backup */
-        	unlink($file_path);
-        	rename($file_path.'.bkup', $file_path);
+        $content = file_get_contents($file_path);      
+        	if (file_exists($file_path.'.bkup')){ 
+			/* Suppression du fichier modifié par le plugin et rename du fichier de backup */
+        		unlink($file_path);
+        		rename($file_path.'.bkup', $file_path);
+        		}
+        	else{
+        		/* Remplacement du fichier d'origine par le fichier de sauvegarde si le fichier .bkup n'existe pas. */ 
+        		unlink($file_path);
+        		$copy_from = './Customizing/global/plugins/Services/UIComponent/UserInterfaceHook/MinDefxApi/vendor/bkup_files/7.30/_'. $file_name;
+        		$copy_to = $file_path;
+        		copy($copy_from, $copy_to);
+        		}
       }
     }
     ilUtil::sendSuccess($this->plugin->txt("configuration_saved"), true);
